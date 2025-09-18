@@ -3,11 +3,15 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid(
   defineConfig({
-    title: 'How to Deploy',
+    title: 'Build Production Infrastructure',
     description: 'Production Infrastructure with System Initiative and AWS',
 
+    head: [
+      ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
+
     themeConfig: {
-      logo: '/logo.svg',
+      logo: '/logo.png',
 
       nav: [
         { text: 'Home', link: '/' },
@@ -18,61 +22,56 @@ export default withMermaid(
         { text: 'Operations', link: '/operations/continuous-deployment' }
       ],
 
-      sidebar: {
-        '/foundation/': [
-          {
-            text: 'Foundation Layer',
-            items: [
-              { text: 'IAM', link: '/foundation/iam' },
-              { text: 'VCS', link: '/foundation/vcs' },
-              { text: 'Application Configuration', link: '/foundation/application-configuration' },
-              { text: 'Application Dependencies', link: '/foundation/application-dependencies' }
-            ]
-          }
-        ],
-        '/infrastructure/': [
-          {
-            text: 'Infrastructure Layer',
-            items: [
-              { text: 'Foundational Networking', link: '/infrastructure/foundational-networking' },
-              { text: 'Observability', link: '/infrastructure/observability' },
-              { text: 'Service Discovery', link: '/infrastructure/service-discovery' },
-              { text: 'Credential Management', link: '/infrastructure/credential-management-secrets' }
-            ]
-          }
-        ],
-        '/application/': [
-          {
-            text: 'Application Layer',
-            items: [
-              { text: 'Application Artifacts', link: '/application/application-artifacts' },
-              { text: 'Database', link: '/application/database' },
-              { text: 'WAF & CDN', link: '/application/waf-cdn' },
-              { text: 'Overlay Network', link: '/application/overlay-network' }
-            ]
-          }
-        ],
-        '/compute/': [
-          {
-            text: 'Compute & Deployment',
-            items: [
-              { text: 'Application Compute', link: '/compute/application-compute' },
-              { text: 'Continuous Integration', link: '/compute/continuous-integration' },
-              { text: 'Health & Smoke Test', link: '/compute/health-smoke-test' },
-              { text: 'Load Balancer', link: '/compute/load-balancer' }
-            ]
-          }
-        ],
-        '/operations/': [
-          {
-            text: 'Operations',
-            items: [
-              { text: 'Continuous Deployment', link: '/operations/continuous-deployment' },
-              { text: 'Alerts', link: '/operations/alerts' }
-            ]
-          }
-        ]
-      },
+      sidebar: [
+        {
+          text: 'Foundation Layer',
+          collapsed: false,
+          items: [
+            { text: 'IAM', link: '/foundation/iam' },
+            { text: 'VCS', link: '/foundation/vcs' },
+            { text: 'Application Configuration', link: '/foundation/application-configuration' },
+            { text: 'Application Dependencies', link: '/foundation/application-dependencies' }
+          ]
+        },
+        {
+          text: 'Infrastructure Layer',
+          collapsed: false,
+          items: [
+            { text: 'Foundational Networking', link: '/infrastructure/foundational-networking' },
+            { text: 'Observability', link: '/infrastructure/observability' },
+            { text: 'Service Discovery', link: '/infrastructure/service-discovery' },
+            { text: 'Credential Management', link: '/infrastructure/credential-management-secrets' }
+          ]
+        },
+        {
+          text: 'Application Layer',
+          collapsed: false,
+          items: [
+            { text: 'Application Artifacts', link: '/application/application-artifacts' },
+            { text: 'Database', link: '/application/database' },
+            { text: 'WAF & CDN', link: '/application/waf-cdn' },
+            { text: 'Overlay Network', link: '/application/overlay-network' }
+          ]
+        },
+        {
+          text: 'Compute & Deployment',
+          collapsed: false,
+          items: [
+            { text: 'Application Compute', link: '/compute/application-compute' },
+            { text: 'Continuous Integration', link: '/compute/continuous-integration' },
+            { text: 'Health & Smoke Test', link: '/compute/health-smoke-test' },
+            { text: 'Load Balancer', link: '/compute/load-balancer' }
+          ]
+        },
+        {
+          text: 'Operations',
+          collapsed: false,
+          items: [
+            { text: 'Continuous Deployment', link: '/operations/continuous-deployment' },
+            { text: 'Alerts', link: '/operations/alerts' }
+          ]
+        }
+      ],
 
       socialLinks: [
         { icon: 'github', link: 'https://github.com' }

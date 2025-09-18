@@ -1,13 +1,13 @@
 ---
 layout: home
-title: How to Deploy - Production Infrastructure Guide
+title: How to Build - Production Infrastructure Guide
 hero:
-  name: "How to Deploy"
+  name: "How to Build"
   text: "Production Infrastructure with System Initiative and AWS"
   tagline: A comprehensive guide to building production-ready infrastructure
   image:
-    src: /logo.svg
-    alt: How to Deploy
+    src: /logo.png
+    alt: How to Build
   actions:
     - theme: brand
       text: Get Started
